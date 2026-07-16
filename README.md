@@ -5,7 +5,7 @@ Dataset link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 **Tech Stack Used**
 
-* **Data Cleaning & Preprocessing:** Python (Pandas, NumPy, seaborn/matplotlib, SQLAlchemy)
+* **Data Cleaning & Preprocessing:** Python (Pandas, glob, python-dotenv, SQLAlchemy)
 * **Relational Database & Aggregation:** SQL ( MySQL)
 * **Data Visualization:** Tableau
 
