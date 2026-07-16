@@ -12,5 +12,5 @@ def db_engine():
 def test_mysql_connection(db_engine):
     # Menguji apakah koneksi ke server MySQL di GitHub Actions berhasil berjalan
     with db_engine.connect() as conn:
-        result = conn.execute("SELECT 1")
+        result = conn.execute(text("SELECT 1"))
         assert result.fetchone()[0] == 1
