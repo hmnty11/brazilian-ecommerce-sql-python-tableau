@@ -1,7 +1,7 @@
 import os
 import pytest
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 @pytest.fixture
 def db_engine():
