@@ -4,3 +4,5 @@ seaborn
 numpy
 sqlalchemy
 pymysql
+dotenv
+glob
