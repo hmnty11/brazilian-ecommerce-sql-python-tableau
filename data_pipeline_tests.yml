@@ -1,0 +1,53 @@
+name: Unified Data Analytics Pipeline (MySQL Dependent)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-data-pipeline:
+    runs-on: ubuntu-latest
+    
+    # 1. Run MySQL service to contain data from notebooks
+    services:
+      mysql-db:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root_password
+          MYSQL_DATABASE: olist_test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+    - name: Checking code 
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.14'
+        cache: 'pip'
+
+    - name: Install Libraries
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt 
+        pip install nbconvert ipykernel
+
+    - name: Step 1: Running Unit Test SQLAlchemy (Pytest)
+      env:
+        DATABASE_URL: mysql+pymysql://root:root_password@127.0.0.1:3306/olist_test
+      run: |
+        pytest test_pipeline.py -v
+
+    - name: Step 2: Excecute each notebook
+      env:
+        DATABASE_URL: mysql+pymysql://root:root_password@127.0.0.1:3306/olist_test
+      run: |
+        # Menggunakan wildcard (*) agar Git mengeksekusi Notebook berdasarkan urutan nomor/abjad
+        # 01_etl_pipeline.ipynb akan jalan duluan untuk mengisi database
+        # 02_analytics.ipynb akan jalan setelahnya untuk menarik data tersebut
+        jupyter nbconvert --to notebook --execute Notebook/*.ipynb --ExecutePreprocessor.kernel_name=python3
