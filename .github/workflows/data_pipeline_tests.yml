@@ -35,15 +35,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt 
-          pip install nbconvert ipykernel pytest
+          pip install nbconvert ipykernel
 
-      - name: Step 1 Running Unit Test SQLAlchemy (Pytest)
+      - name: "Step 1 : Running Unit Test SQLAlchemy (Pytest)"
         env:
           DATABASE_URL: mysql+pymysql://root:root_password@127.0.0.1:3306/olist_test
         run: |
           pytest test_pipeline.py -v
 
-      - name: Step 2 Excecute each notebook
+      - name: "Step 2 : Excecute each notebook"
         env:
           DATABASE_URL: mysql+pymysql://root:root_password@127.0.0.1:3306/olist_test
         run: |
