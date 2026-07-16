@@ -49,9 +49,11 @@ jobs:
 
       - name: "Step 2 : Excecute each notebook"
         env:
+          DB_USER: root
+          DB_PASS: root_password
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+          DB_NAME: olist_test
           DATABASE_URL: mysql+pymysql://root:root_password@127.0.0.1:3306/olist_test
         run: |
-          # Menggunakan wildcard (*) agar Git mengeksekusi Notebook berdasarkan urutan nomor/abjad
-          # 01_etl_pipeline.ipynb akan jalan duluan untuk mengisi database
-          # 02_analytics.ipynb akan jalan setelahnya untuk menarik data tersebut
           jupyter nbconvert --to notebook --execute Notebook/*.ipynb --ExecutePreprocessor.kernel_name=python3
