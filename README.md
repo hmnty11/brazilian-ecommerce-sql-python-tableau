@@ -27,7 +27,7 @@ Dataset link: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 The final output is an interactive Tableau executive dashboard utilizing regional parameters as control filters, designed with a modern Card UI layout.
 
-![Olist Dashboard](<img width="1359" height="770" alt="Dashboard_Screenshoot" src="https://github.com/user-attachments/assets/c74f37bf-454b-4ec2-af93-5738f8270360" />)
+![Olist Dashboard](https://github.com/user-attachments/assets/c74f37bf-454b-4ec2-af93-5738f8270360)
 
 🔗 **[Click Here to View the Interactive Dashboard on Tableau Public](Masukkan_Link_Tableau_Public_Kamu_Disini)**
 
