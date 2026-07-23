@@ -33,6 +33,6 @@ The final output is an interactive Tableau executive dashboard utilizing regiona
 
 ## 💡 Key Insights
 
-- **Revenue Trend:** _(Isi dengan 1 kalimat temuanmu, misal: There was a massive spike in revenue during November 2017, aligning with Black Friday sales)._
-- **Logistics Bottleneck:** The **Amapá (AP)** region faces critical logistical issues with an average delivery delay of over 96 days, requiring immediate supply chain and routing optimization.
-- **Customer Retention:** A small fraction of users (top 5% VIPs) contributes significantly to the overall revenue, indicating a strong opportunity for a targeted loyalty program to maintain high-value retention.
+- **Revenue Trend:** 
+- **Logistics Bottleneck:** 
+- **Customer Retention:** 
