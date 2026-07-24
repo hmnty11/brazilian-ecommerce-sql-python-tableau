@@ -29,10 +29,10 @@ The final output is an interactive Tableau executive dashboard utilizing regiona
 
 ![Olist Dashboard](https://github.com/user-attachments/assets/c74f37bf-454b-4ec2-af93-5738f8270360)
 
-🔗 **[Click Here to View the Interactive Dashboard on Tableau Public](Masukkan_Link_Tableau_Public_Kamu_Disini)**
+🔗 **[Click Here to View the Interactive Dashboard on Tableau Public](https://public.tableau.com/views/OLISTSALESLOGISTICSPERFORMANCE/OlistE-CommercePerformanceDashboard_?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
 ## 💡 Key Insights
 
-- **Revenue Trend:** 
-- **Logistics Bottleneck:** 
-- **Customer Retention:** 
+- **Revenue Trend:**
+- **Logistics Bottleneck:**
+- **Customer Retention:**
