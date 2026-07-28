@@ -33,6 +33,6 @@ The final output is an interactive Tableau executive dashboard utilizing regiona
 
 ## 💡 Key Insights
 
-- **Revenue Trend:**
-- **Logistics Bottleneck:**
-- **Customer Retention:**
+- **Revenue Trend:** Olist E-commerce is getting more mature financially, and trend for the monthly revenue is uptrend 
+- **Logistics Bottleneck:** There is some logistics bottlenecks on AP, RR, AM, AC States. The most delayed delivery is 96 Days on AP 
+- **Customer Retention:** Top 15 customers is contributing approximately 38% on Olist E-commerce revenue
